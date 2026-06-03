@@ -26,7 +26,7 @@ Consider using coding best practices and senior software engineering experience 
 
 ## 1. Initial Prompt
 
-```
+```text
 Act as a Senior Software Engineer specialized in PostgreSQL, relational modeling,
 normalization, indexes, and Prisma migrations.
 
@@ -297,3 +297,23 @@ ORDER BY co.name, p.title, istep."orderIndex";
   original value). The Docker container remains running on port **5452** for DBeaver
   inspection. Restarting the container with `docker-compose up -d` (after `.env`
   restoration) would map it back to 5432.
+
+
+---
+**Model:** Claude Code auto mode
+
+# Prompt 3:
+
+## Role:
+You are an expert software engineer specialized in databases.
+
+## Context:
+I have already modified the codebase of this repository to update the current repository database with new entities based on the @exercise-instructions.md file, in order to generate .sql files to migrate the database based on an ERD in Mermaid.
+Some useful information is present in the @course-info.md file.
+Make sure to read these two files.
+I completed the task with an AI agent using the prompts indicated in @prompts/prompts-LL.md. After modifying the files, I created the commit "feat: extend LTI data model with hiring workflow entities", which I used to create the PR.
+An automatic AI review system detected some issues described in the @findings-pr.md file.
+
+## Task:
+Without making any modifications yet, analyze these findings and compare them against the base repository, the exercise requirements, and what was implemented in the commit.
+Then, create a fix plan if applicable. If a fix is not applicable, justify why.
